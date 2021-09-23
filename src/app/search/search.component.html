@@ -1,0 +1,24 @@
+<p>search works!</p>
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>First name</mat-label>
+        <input matInput>
+    </mat-form-field>
+</form>
+
+<input type="text" name="movieName" placeholder="Please enter movie name" class="form-control" [(ngModel)]="movieName">
+<button type="button" mat-raised-button color="primary" (click)="searchMovie(movieName)">Search</button>
+<div class="" fxLayout="row wrap" >
+    <div class="col-md-3" *ngFor="let m of movie">
+      <div class="card mb-2">
+        <div class="card-body" >
+          <h4 style="font-size: large; font-weight: bolder;text-align: center;" class="card-title">{{m.title}}</h4>
+          </div>
+          <img class="card-img-top"
+          src="https://image.tmdb.org/t/p/w200/{{m.poster_path}}" 
+          alt="Card image cap"/>
+          <div class="card-body" style="align-self: center;">
+        </div> 
+      </div>
+    </div>
+  </div>
