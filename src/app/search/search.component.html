@@ -1,13 +1,8 @@
-<p>search works!</p>
-<form class="example-form">
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>First name</mat-label>
-        <input matInput>
-    </mat-form-field>
-</form>
-
-<input type="text" name="movieName" placeholder="Please enter movie name" class="form-control" [(ngModel)]="movieName">
+<div class="form-group" class="form-inline" style="padding: 0% 2% 0% 2%;">
+<input type="text" name="movieName" placeholder="Please enter movie name" class="form-control col-md-11" [(ngModel)]="movieName"> &nbsp;&nbsp;
 <button type="button" mat-raised-button color="primary" (click)="searchMovie(movieName)">Search</button>
+</div>
+&nbsp;
 <div class="" fxLayout="row wrap" >
     <div class="col-md-3" *ngFor="let m of movie">
       <div class="card mb-2">

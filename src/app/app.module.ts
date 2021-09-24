@@ -15,15 +15,23 @@ import { MatInputModule } from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { InputsModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
   declarations: [
     AppComponent, routingComponents,
     SearchComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule, MatCardModule, MatGridListModule, ReactiveFormsModule, MatFormFieldModule,
-    AppRoutingModule, FormsModule, BrowserAnimationsModule, MatInputModule, MatToolbarModule, MatButtonModule, FlexLayoutModule
+    AppRoutingModule, FormsModule, BrowserAnimationsModule, MatInputModule, MatToolbarModule, MatButtonModule, FlexLayoutModule, NgbModule,
+    MDBBootstrapModule.forRoot(), InputsModule, WavesModule, ButtonsModule,
   ],
   exports:[
   ],
